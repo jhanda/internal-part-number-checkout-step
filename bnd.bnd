@@ -1,0 +1,4 @@
+Bundle-Name: part-number-checkout
+Bundle-SymbolicName: com.liferay.commerce.demo.partnumber.checkout
+Bundle-Version: 1.0.0
+Web-ContextPath: /part-number-checkout
