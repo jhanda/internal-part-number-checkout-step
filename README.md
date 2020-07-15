@@ -1,5 +1,7 @@
 # Internal Part Number Checkout Step
 
+![Freelancer](doc/preview.png)
+
 ## Usage
 
 This module allows you to capture an internal part number during the checkout process and to store that part number as a custom field on the Order Line Item.  
