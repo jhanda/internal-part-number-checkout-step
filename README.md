@@ -10,7 +10,7 @@ This module allows you to capture an internal part number during the checkout pr
 
 ## Installation
 
-- Download the `.jar` file in [releases]() and deploy it into Liferay.
+- Download the `.jar` file in [releases](https://github.com/jhanda/internal-part-number-checkout-step/releases/tag/1.0.0) and deploy it into Liferay.
 
 or
 
