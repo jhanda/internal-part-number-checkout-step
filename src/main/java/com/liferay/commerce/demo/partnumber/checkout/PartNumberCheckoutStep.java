@@ -60,15 +60,15 @@ public class PartNumberCheckoutStep extends BaseCommerceCheckoutStep {
 
     @Override
     public void processAction(ActionRequest actionRequest, ActionResponse actionResponse) throws Exception {
-        _log.error("In the process Action");
-//        CommerceOrder commerceOrder = (CommerceOrder)actionRequest.getAttribute(CommerceCheckoutWebKeys.COMMERCE_ORDER);
-//        List<CommerceOrderItem> commerceOrderItems = commerceOrder.getCommerceOrderItems();
-//        for (CommerceOrderItem commerceOrderItem: commerceOrderItems){
-//            String internalPartNumber = ParamUtil.getString(actionRequest, Long.toString(commerceOrderItem.getCommerceOrderItemId()));
-//            if (!Validator.isBlank(internalPartNumber)){
-//                commerceOrderItem.getExpandoBridge().setAttribute("internal-part-number", internalPartNumber);
-//            }
-//        }
+
+        CommerceOrder commerceOrder = (CommerceOrder)actionRequest.getAttribute(CommerceCheckoutWebKeys.COMMERCE_ORDER);
+        List<CommerceOrderItem> commerceOrderItems = commerceOrder.getCommerceOrderItems();
+        for (CommerceOrderItem commerceOrderItem: commerceOrderItems){
+            String internalPartNumber = ParamUtil.getString(actionRequest, Long.toString(commerceOrderItem.getCommerceOrderItemId()));
+            if (!Validator.isBlank(internalPartNumber)){
+                commerceOrderItem.getExpandoBridge().setAttribute("internal-part-number", internalPartNumber);
+            }
+        }
     }
 
     @Override
